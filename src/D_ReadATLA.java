@@ -63,10 +63,22 @@ public class D_ReadATLA {
         /* TODO : print the allies of the first character in the JSON */
         // here is a line to get you started:
         JSONObject character = (JSONObject) jsonArray.get(0); // 0 index is the first character
+        JSONArray allies = (JSONArray) character.get("allies");
+        System.out.println("Allies of the first character:");
+
+        int n = allies.size();
+        for(int i = 0; i < n; i++) {
+            System.out.println(allies.get(i));
+        }
 
         /* TODO : print the "name" of every character in the jsonArray */
+        System.out.println("\nNames of all characters:");
 
-
+        int size = jsonArray.size();
+        for(int i = 0; i < size; i++) {
+            JSONObject object = (JSONObject) jsonArray.get(i);
+            System.out.println(object.get("name"));
+        }
     }
 
 }

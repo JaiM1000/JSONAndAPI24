@@ -29,6 +29,23 @@ public class B_JsonArrayPractice {
             String film = (String) filmsArray.get(i);
             System.out.println(film);
         }
+       // TODO: check to see if there is a key called starships
+        // .containsKey()
 
+        if(json.containsKey("starships")) {
+            System.out.println("Yes there are starships in this JSON Object");
+        }
+
+        // TODO: now use our array skills to print the starships
+
+        JSONArray starshipsArray = (JSONArray) json.get("starships");
+        int m = starshipsArray.size();
+        System.out.println("FILMS: ");
+        for(int i = 0; i < m; i++) {
+            String ship = (String) filmsArray.get(i);
+            System.out.println(ship);
+        }
     } // end of constructor
 }
+
+

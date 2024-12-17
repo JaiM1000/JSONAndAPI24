@@ -63,6 +63,10 @@ public class C_ReadSWAPI {
         JSONObject json = (JSONObject) parser.parse(jsonString);
         System.out.println("JSON: " + json);
 
+        // TODO: get the name of our person and print it to the screen
+        String name = (String) json.get("name");
+        System.out.println("\nCharacter Name: " + name);
+
         // get a single value out of the json
         String height = (String) json.get("height");
         System.out.println("HEIGHT: " + height);
